@@ -9,6 +9,9 @@ end
 if @listen_ip
   result << '-l ' + @listen_ip
 end
+if @use_sasl
+  result << '-S '
+end
 if @udp_port
   result << '-U ' + @udp_port.to_s
 end
